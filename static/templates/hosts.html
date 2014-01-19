@@ -1,0 +1,15 @@
+<img ng-show="loading" class="loader animate-if" src="static/img/ajax.gif" alt="Loading..."/>
+
+<ul class="host-list">
+
+  <li ng-repeat="host in hosts">
+
+    <a class="" href="#/year/{{ host.year }}">{{ host.year }}</a>
+
+    <img src="{{ host.flag }}" alt="{{ host.country }}"/>
+
+    <h4>{{ host.city }}, {{ host.country }}</h4>
+
+  </li>
+
+</ul>

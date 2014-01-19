@@ -1,0 +1,47 @@
+// Index
+// ----------------------------------------------------------------------------
+
+.index {
+
+  .cta {
+
+    @include button;
+    font-size: em(20);
+    padding-top: 10px;
+    background: lighten($clr-olympic-blue, 30%);
+    margin: 20px auto 0;
+    width: 60%;
+    text-align: center;
+    display: block;
+
+  }
+
+  .micetype {
+
+    margin: 20px;
+    text-align: center;
+
+  }
+
+  p {
+
+    font-size: em(15);
+    margin: 20px;
+    text-align: center;
+
+  }
+
+}
+
+.logo {
+
+  width: 90%;
+  margin: 20px 5% 0;
+
+}
+
+h1 {
+
+  text-align: center;
+
+}

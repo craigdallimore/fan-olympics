@@ -1,0 +1,15 @@
+// Common
+// ----------------------------------------------------------------------------
+
+html, body {
+  background: $clr-white;
+}
+
+* {
+  @include box-sizing(border-box);
+}
+
+// Angular
+[ ng-cloak ] {
+  display: none;
+}

@@ -1,0 +1,41 @@
+// Typography
+// ----------------------------------------------------------------------------
+
+@include font-face(firasans, '../fonts/firasansot-regular-webfont');
+@include font-face(firasans, '../fonts/firasansot-regularitalic-webfont', normal, italic);
+@include font-face(firasans, '../fonts/firasansot-bold-webfont', bold);
+@include font-face(firasans, '../fonts/firasansot-bolditalic-webfont', bold, italic);
+
+html, body {
+
+  font-family: firasans, 'segoe ui', arial, helvetica, roboto;
+  color: $clr-black;
+
+}
+
+h1 {
+
+  font-size: em(20);
+
+}
+
+a {
+
+  color: $clr-link;
+
+  &:hover {
+
+    color: darken($clr-link, 5%);
+
+  }
+
+}
+
+.micetype {
+
+  color: lighten($clr-black, 40%);
+  a {
+    color: lighten($clr-black, 30%);
+  }
+
+}
