@@ -1,1 +1,37 @@
-<h2>Year {{ year }}</h2>
+<ul class="ring-loader" ng-class="{ loading: wikiLoading || photoLoading || athleteLoading }">
+  <li></li><li></li><li></li><li></li><li></li>
+</ul>
+
+<section class="host-wiki" ng-cloak ng-hide="wikiLoading">
+
+  <img ng-src="{{ logo }}" alt="{{ host.city }}" />
+
+  <h2>{{ year }}</h2>
+  <h3>{{ city }}, {{ country }}</h3>
+
+  <p class="wiki">{{ wiki }}</p>
+
+  <ul ng-hide="athleteLoading" class="athlete-list">
+
+    <li ng-repeat="athlete in athletes">
+      <a href="#/athlete/{{ athlete.firstname }}_{{athlete.lastname }}">
+        {{ athlete.firstname }} {{ athlete.lastname }}
+      </a>
+      {{ athlete.countrycode  }}
+      <dl>
+        <dt>Rank</dt><dd>{{ athlete.rank }}</dd>
+        <dt>Gold</dt><dd class="gold medal">{{ athlete.gold }}</dd>
+        <dt>Silver</dt><dd class="silver medal">{{ athlete.silver }}</dd>
+        <dt>Bronze</dt><dd class="bronze medal">{{ athlete.bronze }}</dd>
+      </dl>
+    </li>
+
+  </ul>
+
+  <figcaption ng-hide="photoLoading">{{ photo.caption }}</figcaption>
+
+</section>
+
+
+
+

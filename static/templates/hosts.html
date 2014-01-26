@@ -1,10 +1,12 @@
-<img ng-show="loading" class="loader animate-if" src="static/img/ajax.gif" alt="Loading..."/>
+<ul class="ring-loader" ng-class="{ loading: loading }">
+  <li></li><li></li><li></li><li></li><li></li>
+</ul>
 
-<ul class="host-list">
+<ul class="host-list" ng-hide="loading">
 
   <li ng-repeat="host in hosts">
 
-    <a class="" href="#/year/{{ host.year }}">{{ host.year }}</a>
+    <a class="btn-badge" href="#/year/{{ host.year }}">{{ host.year }}</a>
 
     <img ng-src="{{ host.flag }}" alt="{{ host.country }}"/>
 

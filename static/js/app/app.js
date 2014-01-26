@@ -1,32 +1,19 @@
 define([
 
   'angular',
-  'importio',
-  'app/config',
   'app/controllers',
+  'app/services',
   'angularRoute',
   'angularAnimate'
 
-  ], function( angular, importio, config, controllers ) {
-
-  // Configure importio
-  importio.init({
-
-    "auth": {
-
-      "userGuid": config.userGuid,
-      "apiKey":   config.apiKey
-
-    },
-
-    "host": "import.io"
-
-  });
+  ], function( angular, controllers, services ) {
 
   return angular.module('fanApp', [
 
     'ngRoute',
-    'fanApp.controllers'
+    'ngAnimate',
+    'fanApp.controllers',
+    'fanApp.services'
 
   ]);
 

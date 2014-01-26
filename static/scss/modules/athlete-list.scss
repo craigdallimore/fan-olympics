@@ -1,0 +1,53 @@
+// Athlete List
+// ----------------------------------------------------------------------------
+
+.athlete-list {
+
+  @include span-columns(6);
+  padding: $gutter;
+
+  li {
+
+    @include clearfix;
+    margin-top: $gutter / 2;
+    padding: $gutter;
+    border-top: 1px solid $clr-olympic-yellow;
+    background: rgba(0, 0, 0, 0.7);
+    color: $clr-white;
+
+
+    &:first-of-type {
+
+      margin-top: 0;
+
+    }
+
+    a {
+
+      color: $clr-white;
+
+    }
+
+    dl {
+
+      @include clearfix;
+      margin-top: $gutter / 2;
+
+    }
+
+    dt, dd {
+
+      padding: 4px 0;
+
+    }
+
+    dt, dd, a {
+
+      float: left;
+      margin: 0 $gutter / 2 0 0;
+
+    }
+
+  }
+
+}

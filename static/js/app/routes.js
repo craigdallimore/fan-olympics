@@ -3,7 +3,9 @@
 
 define(['angular', 'app/app'], function( angular, fanApp ) {
 
-  return fanApp.config(['$routeProvider', function($routeProvider) {
+  return fanApp.config([
+    '$routeProvider',
+    '$locationProvider', function($routeProvider, $locationProvider) {
 
     // Index
     $routeProvider.when('/', {
@@ -21,11 +23,19 @@ define(['angular', 'app/app'], function( angular, fanApp ) {
 
     });
 
-    // Year profile
+    // Year (Host) profile
     $routeProvider.when('/year/:year', {
 
       templateUrl: 'static/templates/year.html',
       controller:  'YearController'
+
+    });
+
+    // Athlete Profile
+    $routeProvider.when('/athlete/:name', {
+
+      templateUrl: 'static/templates/athlete.html',
+      controller:  'AthleteController'
 
     });
 

@@ -1,0 +1,28 @@
+<ul class="ring-loader" ng-class="{ loading: olympicLoading || sportsRefLoading }">
+  <li></li><li></li><li></li><li></li><li></li>
+</ul>
+
+<section class="athlete-profile">
+
+  <h2>{{ firstname }} {{ lastname }}</h2>
+
+  <p ng-show="wiki" class="wiki">{{ bio }}</p>
+
+  <dl class="stat-list" ng-show="sport">
+    <dt ng-show="sport">Sport</dt><dd>{{ sport }}</dd>
+    <dt ng-show="weight">Weight</dt><dd>{{ weight }}</dd>
+    <dt ng-show="height">Height</dt><dd>{{ height }}</dd>
+    <dt ng-show="gender">Gender</dt><dd>{{ gender }}</dd>
+    <dt ng-show="nickname">Nickname</dt><dd>{{ nickname }}</dd>
+    <dt ng-show="country">Country</dt><dd>{{ country }}</dd>
+    <dt ng-show="countrycode">Country code</dt><dd>{{ countrycode }}</dd>
+    <dt ng-show="flag">Flag</dt><dd><img ng-src="{{ flag }}" alt="{{ country }}"/></dd>
+  </dl>
+
+  <dl class="medal-list" ng-show="gold || silver || bronze">
+    <dt ng-show="gold">Gold</dt><dd ng-show="gold" class="gold medal">{{ gold }}</dd>
+    <dt ng-show="silver">Silver</dt><dd ng-show="silver" class="silver medal">{{ silver }}</dd>
+    <dt ng-show="bronze">Bronze</dt><dd ng-show="bronze" class="bronze medal">{{ bronze }}</dd>
+  </dl>
+
+</section>

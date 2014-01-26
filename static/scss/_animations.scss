@@ -1,0 +1,36 @@
+// Animations
+// ----------------------------------------------------------------------------
+
+$tint: 90%;
+
+@include keyframes(backCycle) {
+
+  0% {
+    background: tint($clr-olympic-blue, $tint);
+  }
+  25% {
+    background: tint($clr-olympic-yellow, $tint);
+  }
+  50% {
+    background: tint($clr-olympic-green, $tint);
+  }
+  75% {
+    background: tint($clr-olympic-red, $tint);
+  }
+  100% {
+    background: tint($clr-olympic-blue, $tint);
+  }
+
+}
+
+@include keyframes(spin) {
+
+  0% {
+    @include transform(rotateZ(0));
+  }
+
+  100% {
+    @include transform(rotateZ(359deg));
+  }
+
+}

@@ -1,0 +1,53 @@
+// Host wiki
+// ----------------------------------------------------------------------------
+
+.host-wiki {
+
+  @include span-columns(12);
+  @include outer-container;
+
+  h2, h3, figcaption {
+
+    margin: 0 $gutter;
+    color: $clr-white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+
+  }
+
+  img {
+
+    display: block;
+    margin: $gutter auto;
+
+  }
+
+  .wiki {
+
+    @include span-columns(6 of 12);
+
+  }
+
+  .athlete-list {
+
+    @include span-columns(5 of 12);
+
+  }
+
+  figcaption {
+
+    @include span-columns(8 of 12);
+    @include shift(2 of 12);
+
+  }
+
+  @include media($tablet) {
+
+    .wiki, .athlete-list, figcaption {
+      @include fill-parent();
+      clear: left;
+    }
+
+  }
+
+
+}

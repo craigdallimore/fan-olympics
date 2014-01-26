@@ -1,0 +1,31 @@
+// Medals
+// ----------------------------------------------------------------------------
+
+.medal {
+
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  color: $clr-black;
+  text-align: center;
+
+}
+
+.gold {
+
+  background: gold;
+
+}
+
+.silver {
+
+  background: silver;
+
+}
+
+.bronze {
+
+  background: #A68938;
+
+}

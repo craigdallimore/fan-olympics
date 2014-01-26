@@ -1,0 +1,23 @@
+// Buttons
+// ----------------------------------------------------------------------------
+
+.btn-badge {
+
+  @include transition(background 300ms ease-out);
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 25px;
+  color: $clr-boring-grey;
+  background: $clr-white;
+  text-align: center;
+  padding: 18px 0 0;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+
+  &:hover {
+    background: darken($clr-white, 20%);
+    color: $clr-black;
+  }
+
+}

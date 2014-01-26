@@ -5,8 +5,7 @@ define(['angular'], function(angular) {
 
   return ['$scope', '$http', function($scope, $http) {
 
-    // etc
-
+    $scope.setBackgroundImage(false);
     $scope.$apply();
 
   }];

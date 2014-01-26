@@ -1,0 +1,42 @@
+// Athlete Profile
+// ----------------------------------------------------------------------------
+
+.athlete-profile {
+
+  @include span-columns(12);
+
+  h2, h3 {
+
+    margin: $gutter;
+    color: $clr-white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+
+  }
+
+  .stat-list {
+
+    @include span-columns(6);
+
+  }
+
+  .medal-list {
+
+    @include span-columns(6);
+
+  }
+
+  .wiki {
+
+    @include span-columns(6);
+
+  }
+
+  @include media(tablet) {
+
+    .stat-list, .medal-list, .wiki {
+      clear: left;
+    }
+
+  }
+
+}

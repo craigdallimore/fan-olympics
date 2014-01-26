@@ -14,7 +14,7 @@ html.no-js(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
 
-    title Template
+    block title
 
     meta(name='description', content= '')
     meta(name='author', content='Craig Dallimore')
@@ -30,7 +30,7 @@ html.no-js(lang='en')
 
     script(src='/static/js/libs/modernizr-2.6.2.min.js')
 
-  body(ng-app='fanApp')
+  body(ng-controller="PageController" ng-class="{ 'backCycle': animatedBackground }" ng-app='fanApp', ng-style='bodyStyle').spread
     noscript
       p This site works better with JavaScript enabled.
 

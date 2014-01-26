@@ -1,56 +1,21 @@
 // Hosts Controller
 // ----------------------------------------------------------------------------
 
-define([
+define([ 'angular' ], function( angular ) {
 
-  'angular',
-  'importio',
-  'app/config'
+  return ['$scope', '$animate', 'hostFactory', function($scope, $animate, hostFactory) {
 
-  ], function( angular, importio, config ) {
-
-  return ['$scope', '$animate', function($scope, $animate) {
-
-    $scope.hosts   = [];
     $scope.loading = true;
+    $scope.hosts   = [];
 
-    var hostQueryConfig = {
+    $scope.setBackgroundImage(false);
 
-      "connectorGuids": [ config.hostConnectorGuid ],
-      "input": { "webpage/url": "http://en.wikipedia.org/wiki/Summer_Olympic_Games" }
+    hostFactory.then(function(rows) {
 
-    };
-
-    // Gather the hosts data
-    importio.query(hostQueryConfig, {
-
-      "data": dataCallback
+      $scope.loading = false;
+      $scope.hosts   = rows;
 
     });
-
-    // Present the hosts data
-    function dataCallback(rows) {
-
-      // Inform the ajax spinner it's time to leave
-      $scope.loading = false;
-
-      // Simplify the data to what the template requires
-      $scope.hosts = rows.map(withData).filter(isCompleteHostRow);
-      $scope.$apply();
-
-    }
-
-    function withData(obj) {
-
-      return obj.data;
-
-    }
-
-    function isCompleteHostRow(obj) {
-
-      return obj.year && obj.city && obj.country;
-
-    }
 
     $scope.$apply();
 

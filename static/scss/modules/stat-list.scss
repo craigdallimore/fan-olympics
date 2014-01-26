@@ -1,0 +1,33 @@
+// Stat List
+// ----------------------------------------------------------------------------
+
+.stat-list {
+
+  border-top: 1px solid $clr-olympic-blue;
+  padding: $gutter;
+  background: rgba(0, 0, 0, 0.7);
+
+  dt, dd {
+
+    @include span-columns(3);
+
+    float: left;
+    margin-top: $gutter;
+    color: $clr-white;
+
+    &:first-of-type {
+
+      margin-top: 0;
+
+    }
+
+  }
+
+  dt {
+
+    clear: left;
+
+  }
+
+
+}

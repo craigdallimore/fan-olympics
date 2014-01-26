@@ -1,0 +1,26 @@
+// Medal List
+// ----------------------------------------------------------------------------
+
+.medal-list {
+
+  border-top: 1px solid $clr-olympic-yellow;
+  padding: $gutter;
+  background: rgba(0, 0, 0, 0.7);
+  color: $clr-white;
+
+  dt, dd {
+
+    padding-top: 4px;
+    margin-right: $gutter;
+    float: left;
+
+
+  }
+
+  .medal {
+
+    color: $clr-black;
+
+  }
+
+}
