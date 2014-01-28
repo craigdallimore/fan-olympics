@@ -23,8 +23,8 @@ define([ 'angular' ], function( angular ) {
 
     $scope.setBackgroundImage(false);
 
-    $scope.firstname   = $routeParams.name.split('_')[0];
-    $scope.lastname    = $routeParams.name.split('_')[1];
+    $scope.firstname      = $routeParams.name.split('_')[0];
+    $scope.lastname       = $routeParams.name.split('_')[1];
     $scope.olympicLoading = true;
 
     var firstname = $scope.firstname,
@@ -68,7 +68,6 @@ define([ 'angular' ], function( angular ) {
     function onSportsRefDataLoaded(data) {
 
       $scope.sportsRefLoading = false;
-      console.log('sportsref', data);
 
       $scope.gold     = data[0].gold;
       $scope.silver   = data[0].silver;
